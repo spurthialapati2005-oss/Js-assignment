@@ -1,3 +1,4 @@
+//1)
 //Daily Temperature Analyzer
 const temp = [32,35,28,40,38,30,42]
 
@@ -24,3 +25,4 @@ console.log(result4)
 //5. findIndex() of temperature 28
 let result5 = temp.findIndex(ele=>ele==28)
 console.log(result5)
+
