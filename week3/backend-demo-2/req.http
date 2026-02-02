@@ -1,0 +1,54 @@
+### Read all users
+GET http://localhost:4000/user-api/users
+
+### Read user by ObjectID
+GET http://localhost:4000/user-api/users/697dd2c62999b20ed093eaa2
+
+### Create user
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "username" : "Spurthi",
+    "password" : "spurthi",
+    "age" : 20
+}
+
+### Update user
+PUT http://localhost:4000/user-api/users/697dd2c62999b20ed093eaa2
+Content-Type: application/json
+
+{
+    "username" : "Spurthi",
+    "password" : "spurthi123",
+    "age" : 21
+}
+
+### Delete user
+DELETE http://localhost:4000/user-api/users/697dd2c62999b20ed093eaa2
+
+### 
+POST http://localhost:4000/product-api/products
+Content-Type: application/json
+
+{
+    "pid": 101,
+    "productName": "Smartphone",
+    "price": 30000
+}
+
+###
+GET http://localhost:4000/product-api/products
+
+###
+GET http://localhost:4000/product-api/products/697f91583e79cccc8d28b01e
+
+###
+PUT http://localhost:4000/product-api/products/697f91583e79cccc8d28b01e
+Content-Type: application/json
+
+{
+    "pid": 101,
+    "productName": "Smartphone Pro",
+    "price": 45000
+}
