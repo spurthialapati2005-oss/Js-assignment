@@ -1,0 +1,28 @@
+POST http://localhost:4000/prod-api/products
+Content-Type: application/json
+
+{
+  "productName": "Fridge",
+  "price" : 35000,
+  "brand": "Samsung"
+}
+
+###
+GET http://localhost:4000/prod-api/products
+
+###
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "name": "dell",
+    "email": "dell@mail.com",
+    "password": "dell123",
+    "cart": []
+}
+
+### Req to add product to cart
+PUT http://localhost:4000/user-api/user-cart/user-id/698199b9ff9d864a34086a6b/product-id/698178916bcbcaf3329b7596
+
+### Read user by id
+GET http://localhost:4000/user-api/users/698199b9ff9d864a34086a6b
