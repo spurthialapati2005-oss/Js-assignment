@@ -2,7 +2,7 @@
 GET http://localhost:4000/user-api/users
 
 ### Read user by ObjectID
-GET http://localhost:4000/user-api/users/697dd2c62999b20ed093eaa2
+GET http://localhost:4000/user-api/users/6983740f121d7717584c61d1
 
 ### Create user
 POST http://localhost:4000/user-api/users
@@ -15,7 +15,7 @@ Content-Type: application/json
 }
 
 ### Update user
-PUT http://localhost:4000/user-api/users/697dd2c62999b20ed093eaa2
+PUT http://localhost:4000/user-api/users/6983740f121d7717584c61d1
 Content-Type: application/json
 
 {
@@ -25,7 +25,7 @@ Content-Type: application/json
 }
 
 ### Delete user
-DELETE http://localhost:4000/user-api/users/697dd2c62999b20ed093eaa2
+DELETE http://localhost:4000/user-api/users/6983740f121d7717584c61d1
 
 ### 
 POST http://localhost:4000/product-api/products
@@ -41,10 +41,10 @@ Content-Type: application/json
 GET http://localhost:4000/product-api/products
 
 ###
-GET http://localhost:4000/product-api/products/697f91583e79cccc8d28b01e
+GET http://localhost:4000/product-api/products/6983745c121d7717584c61d9
 
 ###
-PUT http://localhost:4000/product-api/products/697f91583e79cccc8d28b01e
+PUT http://localhost:4000/product-api/products/6983745c121d7717584c61d9
 Content-Type: application/json
 
 {
@@ -52,3 +52,16 @@ Content-Type: application/json
     "productName": "Smartphone Pro",
     "price": 45000
 }
+
+### User authentication (login) req
+POST http://localhost:4000/user-api/auth
+Content-Type: application/json
+
+{
+    "username" : "Spurthi",
+    "password" : "spurthi",
+    "age" : 20
+}
+
+### Req for protected route
+GET http://localhost:4000/user-api/test
