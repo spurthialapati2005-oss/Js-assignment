@@ -1,19 +1,26 @@
 //ROLE & PERMISSION ENGINE
-// 1. Get all role names
-const getRoleNames = roles =>
-    Object.keys(roles);
+
+//given data
+const roles = {
+    admin: ["create", "update", "delete", "view"],
+    student: ["view"]
+};
   
-// 2. Check if student can delete
-const canStudentDelete = roles =>
-    roles.student.includes("delete");
+//1.Get all role names
+    const roleNames=Object.keys(roles)
+    console.log("role names are:",roleNames);
   
-// 3. Create flat list of all unique permissions
-const getAllUniquePermissions = roles =>
-    [...new Set(Object.values(roles).flat())];
+//2.Check if student can delete
+    const checkStudentCanDelete=roles.student.includes("delete")
+    console.log("student has delete permission:",checkStudentCanDelete)
   
-// 4. Add new role moderator immutably
-const addRole = (roles, roleName, permissions) => ({
-    ...roles,
-    [roleName]: permissions
-    });
-  
+//3. Create a flat list of all unique permissions
+    const allUniquePermissions=[... new Set(Object.values(roles).flat())]
+    console.log(allUniquePermissions)
+
+//4.Add new role moderator immutably
+    let updatedRole={
+        ...roles,
+        moderator:['create','view']
+    }
+    console.log(updatedRole)
